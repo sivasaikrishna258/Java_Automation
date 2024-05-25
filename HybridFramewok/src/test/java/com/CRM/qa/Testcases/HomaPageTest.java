@@ -19,8 +19,8 @@ import com.CRM.qa.Pages.ContactsPage;
 import com.CRM.qa.Pages.HomePage;
 import com.CRM.qa.Pages.LoginPage;
 
-/*
- * all actions  on  homepage
+/**
+ * 
  */
 
 public class HomaPageTest extends TestBase {

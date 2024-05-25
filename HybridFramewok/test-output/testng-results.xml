@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="0" failed="2" skipped="0">
+<testng-results total="5" passed="2" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-19T10:08:24Z" name="Default suite" finished-at="2024-04-19T10:11:05Z" duration-ms="161173">
+  <suite started-at="2024-04-22T10:11:09Z" name="Suite" finished-at="2024-04-22T10:17:45Z" duration-ms="395467">
     <groups>
     </groups>
-    <test started-at="2024-04-19T10:08:24Z" name="Default test" finished-at="2024-04-19T10:11:05Z" duration-ms="161173">
-      <class name="com.CRM.qa.Testcases.LoginTest">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:com.CRM.qa.Testcases.LoginTest@24569dba]" started-at="2024-04-19T15:38:24Z" name="initialization" finished-at="2024-04-19T15:39:38Z" duration-ms="73984" status="PASS">
+    <test started-at="2024-04-22T10:11:09Z" name="Test" finished-at="2024-04-22T10:17:45Z" duration-ms="395467">
+      <class name="com.CRM.qa.Testcases.CalendarPageTest">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.CRM.qa.Testcases.CalendarPageTest@70ed52de]" started-at="2024-04-22T15:41:09Z" name="initialization" finished-at="2024-04-22T15:41:44Z" duration-ms="34624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="LogintoCRMApplication(java.lang.String, java.lang.String)[pri:0, instance:com.CRM.qa.Testcases.LoginTest@24569dba]" started-at="2024-04-19T15:39:38Z" name="LogintoCRMApplication" data-provider="getdata" finished-at="2024-04-19T15:39:39Z" duration-ms="172" status="FAIL">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-            <param index="1">
-              <value is-null="true"/>
-            </param>
-          </params>
+        <test-method signature="clickOnCalendarTest()[pri:0, instance:com.CRM.qa.Testcases.CalendarPageTest@70ed52de]" started-at="2024-04-22T15:41:44Z" name="clickOnCalendarTest" finished-at="2024-04-22T15:41:44Z" duration-ms="153" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
@@ -27,10 +19,10 @@
 Build info: version: '4.14.1', revision: '03f8ede370'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1f63f78902751559e876df4fb32dfdf3, clickElement {id=f.28CFE5A73FE2EC9EDA50DB379A818A83.d.9D56C8341A9C8BE1C680B4E00E642B16.e.6}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63289}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63289/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1f63f78902751559e876df4fb32dfdf3)] -> css selector: a[href*='ui']
-Session ID: 1f63f78902751559e876df4fb32dfdf3]]>
+Command: [dfa03fa5c1c6def5e93b5b9170397ffe, clickElement {id=f.892B3B3278E3F33C98F250DB361A0739.d.9C3F019EF271272827A2616EC0BD283D.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64914}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64914/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (dfa03fa5c1c6def5e93b5b9170397ffe)] -> css selector: a[href*='ui']
+Session ID: dfa03fa5c1c6def5e93b5b9170397ffe]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
@@ -38,10 +30,10 @@ Session ID: 1f63f78902751559e876df4fb32dfdf3]]>
 Build info: version: '4.14.1', revision: '03f8ede370'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1f63f78902751559e876df4fb32dfdf3, clickElement {id=f.28CFE5A73FE2EC9EDA50DB379A818A83.d.9D56C8341A9C8BE1C680B4E00E642B16.e.6}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63289}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63289/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1f63f78902751559e876df4fb32dfdf3)] -> css selector: a[href*='ui']
-Session ID: 1f63f78902751559e876df4fb32dfdf3
+Command: [dfa03fa5c1c6def5e93b5b9170397ffe, clickElement {id=f.892B3B3278E3F33C98F250DB361A0739.d.9C3F019EF271272827A2616EC0BD283D.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64914}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64914/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (dfa03fa5c1c6def5e93b5b9170397ffe)] -> css selector: a[href*='ui']
+Session ID: dfa03fa5c1c6def5e93b5b9170397ffe
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -64,7 +56,7 @@ Session ID: 1f63f78902751559e876df4fb32dfdf3
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
 	at com.CRM.qa.Pages.LoginPage.login(LoginPage.java:54)
-	at com.CRM.qa.Testcases.LoginTest.LogintoCRMApplication(LoginTest.java:34)
+	at com.CRM.qa.Testcases.CalendarPageTest.clickOnCalendarTest(CalendarPageTest.java:34)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
@@ -92,24 +84,30 @@ Session ID: 1f63f78902751559e876df4fb32dfdf3
           </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LogintoCRMApplication -->
-        <test-method is-config="true" signature="initialization()[pri:0, instance:com.CRM.qa.Testcases.LoginTest@24569dba]" started-at="2024-04-19T15:39:39Z" name="initialization" finished-at="2024-04-19T15:41:05Z" duration-ms="86371" status="PASS">
+        </test-method> <!-- clickOnCalendarTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.CRM.qa.Testcases.CalendarPageTest@70ed52de]" started-at="2024-04-22T15:41:44Z" name="teardown" finished-at="2024-04-22T15:41:45Z" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.CRM.qa.Testcases.CalendarPageTest -->
+      <class name="com.CRM.qa.Testcases.HomaPageTest">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:41:45Z" name="initialization" finished-at="2024-04-22T15:41:56Z" duration-ms="11502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="LogintoCRMApplication(java.lang.String, java.lang.String)[pri:0, instance:com.CRM.qa.Testcases.LoginTest@24569dba]" started-at="2024-04-19T15:41:05Z" name="LogintoCRMApplication" data-provider="getdata" finished-at="2024-04-19T15:41:05Z" duration-ms="50" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sivasaikrishna258@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sivasai@123]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="clickOnContactsLinkTest()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:41:56Z" name="clickOnContactsLinkTest" finished-at="2024-04-22T15:42:32Z" duration-ms="35812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnContactsLinkTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:42:32Z" name="teardown" finished-at="2024-04-22T15:42:33Z" duration-ms="511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:42:33Z" name="initialization" finished-at="2024-04-22T15:44:21Z" duration-ms="108125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="clickOncalendarLinkTest()[pri:1, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:44:21Z" name="clickOncalendarLinkTest" finished-at="2024-04-22T15:44:21Z" duration-ms="64" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
@@ -117,10 +115,10 @@ Session ID: 1f63f78902751559e876df4fb32dfdf3
 Build info: version: '4.14.1', revision: '03f8ede370'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1b71daeb355d2de93a330382bd8ef67b, clickElement {id=f.45634A40062FD029CDA154155F13B340.d.139B8FFFE5BD59B5707B72449D3A7241.e.9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63355}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63355/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1b71daeb355d2de93a330382bd8ef67b)] -> css selector: a[href*='ui']
-Session ID: 1b71daeb355d2de93a330382bd8ef67b]]>
+Command: [c5837f6e7a07521d114ae3916c3bb019, clickElement {id=f.71F8B4B8572009F5CD6065DB98BFD6F0.d.FA3F5C1768958056EFA0C01D0AFFAFD1.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65079}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65079/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c5837f6e7a07521d114ae3916c3bb019)] -> css selector: a[href*='ui']
+Session ID: c5837f6e7a07521d114ae3916c3bb019]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
@@ -128,10 +126,10 @@ Session ID: 1b71daeb355d2de93a330382bd8ef67b]]>
 Build info: version: '4.14.1', revision: '03f8ede370'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1b71daeb355d2de93a330382bd8ef67b, clickElement {id=f.45634A40062FD029CDA154155F13B340.d.139B8FFFE5BD59B5707B72449D3A7241.e.9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63355}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63355/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (1b71daeb355d2de93a330382bd8ef67b)] -> css selector: a[href*='ui']
-Session ID: 1b71daeb355d2de93a330382bd8ef67b
+Command: [c5837f6e7a07521d114ae3916c3bb019, clickElement {id=f.71F8B4B8572009F5CD6065DB98BFD6F0.d.FA3F5C1768958056EFA0C01D0AFFAFD1.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65079}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65079/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c5837f6e7a07521d114ae3916c3bb019)] -> css selector: a[href*='ui']
+Session ID: c5837f6e7a07521d114ae3916c3bb019
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -154,7 +152,7 @@ Session ID: 1b71daeb355d2de93a330382bd8ef67b
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
 	at com.CRM.qa.Pages.LoginPage.login(LoginPage.java:54)
-	at com.CRM.qa.Testcases.LoginTest.LogintoCRMApplication(LoginTest.java:34)
+	at com.CRM.qa.Testcases.HomaPageTest.clickOncalendarLinkTest(HomaPageTest.java:61)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
@@ -182,8 +180,107 @@ Session ID: 1b71daeb355d2de93a330382bd8ef67b
           </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LogintoCRMApplication -->
-      </class> <!-- com.CRM.qa.Testcases.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- clickOncalendarLinkTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:44:21Z" name="teardown" finished-at="2024-04-22T15:44:22Z" duration-ms="443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:44:22Z" name="initialization" finished-at="2024-04-22T15:44:45Z" duration-ms="23391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="clickOnCompaniesLinkTest()[pri:2, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:44:45Z" name="clickOnCompaniesLinkTest" finished-at="2024-04-22T15:45:53Z" duration-ms="67638" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[contains(text(),'Companies1')]' (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[contains(text(),'Companies1')]' (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.CRM.qa.Pages.HomePage.clickOnCompaniesrLink(HomePage.java:58)
+	at com.CRM.qa.Testcases.HomaPageTest.clickOnCompaniesLinkTest(HomaPageTest.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Companies1')]"}
+  (Session info: chrome=124.0.6367.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eafaf55bbcced353d60b65f159161159, findElement {using=xpath, value=//*[contains(text(),'Companies1')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\SAIPRA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65182/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eafaf55bbcced353d60b65f159161159
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:107)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 24 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCompaniesLinkTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:45:53Z" name="teardown" finished-at="2024-04-22T15:45:53Z" duration-ms="644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:45:53Z" name="initialization" finished-at="2024-04-22T15:46:39Z" duration-ms="45190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="verifyUserNameTest()[pri:3, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:46:39Z" name="verifyUserNameTest" finished-at="2024-04-22T15:47:44Z" duration-ms="65283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserNameTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.CRM.qa.Testcases.HomaPageTest@496bc455]" started-at="2024-04-22T15:47:44Z" name="teardown" finished-at="2024-04-22T15:47:44Z" duration-ms="546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.CRM.qa.Testcases.HomaPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

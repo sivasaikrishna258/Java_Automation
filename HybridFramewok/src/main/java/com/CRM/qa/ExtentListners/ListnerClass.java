@@ -78,7 +78,7 @@ public class ListnerClass extends TestBase implements ITestListener{
 	    
 		String currentDir = System.getProperty("user.dir");
 		try {
-			FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + result.getName() +"-"+result.getStartMillis()+ ".png"));
+			FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + result.getName()+ ".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -88,7 +88,7 @@ public class ListnerClass extends TestBase implements ITestListener{
 	    if(screenShotFile.exists())
 	    {
 	    	try {
-				test.fail("Captured Screenshot is below:" +test.addScreenCaptureFromPath("C:\\Users\\Sai Prathap\\git\\Main-Projects\\HybridFramewok\\screenshots\\"+result.getName()+".png"));
+				test.fail("Captured Screenshot is below:" +test.addScreenCaptureFromPath("C:\\Users\\Sai Prathap\\Mycode\\HybridFramewok\\screenshots"+result.getName()+".png"));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

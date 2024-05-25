@@ -4,8 +4,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
@@ -39,25 +42,29 @@ public class UtilClass extends TestBase {
 	
 	public static  Object[][] getTestData(String sheetName) throws IOException {
 		
-		FileInputStream file =new FileInputStream("C:\\Users\\Sai Prathap\\git\\repository3\\HybridFramewok\\Testdata\\Testdata.xlsx");
+		FileInputStream file =new FileInputStream("C:\\Users\\Sai Prathap\\Mycode\\HybridFramewok\\Testdata\\Testdata.xlsx");
 		XSSFWorkbook workbook = new XSSFWorkbook(file); //creating object of workbook
 		XSSFSheet sheet=workbook.getSheet(sheetName);		//getting yhe sheet from workbook object
 		
 		int numberofrows=sheet.getPhysicalNumberOfRows();//gives total number of rows
 	
 		int coloumns=sheet.getRow(0).getLastCellNum();//
-		
-		Object data[][]=new Object[numberofrows][coloumns];
-		for(int i=1;i<numberofrows;i++) {
-			for(int k=0;k<sheet.getRow(i).getLastCellNum();k++) {
-				
-				data[i][k]=sheet.getRow(i).getCell(k).toString();
+		int a=sheet.getLastRowNum();
+		Object data[][]=new Object[a][coloumns];
+		for(int i=0;i<a;i++) {
+			for(int k=0;k<coloumns;k++) {
 			
-			}
+				
+				data[i][k]=sheet.getRow(i+1).getCell(k).getStringCellValue();   //data[0][0]=r[1]c[0]
+				//data[i][1]=sheet.getRow(i+1).getCell(1).getStringCellValue();    //data[0][1]=r[1]c[1]
+			}	
+			
 		}
-		
-		
 		return data;
+		
+		
+		
+		
 	}
 
 	

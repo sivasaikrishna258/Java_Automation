@@ -16,7 +16,7 @@ import com.CRM.qa.Utilities.UtilClass;
 
 public class HomePage extends TestBase{
 
-	@FindBy(xpath="//*[contains(text(),'Advanapu  Sivasaikrishna1 ')]")
+	@FindBy(xpath="//*[contains(text(),'Advanapu  Sivasaikrishna ')]")
 	WebElement  uservalidation;
 
 	@FindBy(xpath ="//*[contains(text(),'Calendar')]")
@@ -25,7 +25,7 @@ public class HomePage extends TestBase{
 	@FindBy(xpath="//*[contains(text(),'Contacts')]")
 	WebElement  contactslink;
 
-	@FindBy(xpath="//*[contains(text(),'Companies')]")
+	@FindBy(xpath="//*[contains(text(),'Companies1')]")
 	WebElement  companieslink;
 
 	public HomePage() {

@@ -23,9 +23,9 @@ public class LoginPage extends TestBase {
 //		return loginbutton;
 //	}
 //
-//	/**
-//	 * @param loginbutton the loginbutton to set
-//	 */
+	/**
+	 * @param loginbutton the loginbutton to set
+	 */
 	public void setLoginbutton(WebElement loginbutton) {
 		this.loginbutton = loginbutton;
 	}
@@ -46,9 +46,6 @@ public class LoginPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-//	public void clickOnLoginLink() {
-//		loginbutton.click();
-//	}
 
 	public HomePage login(String uname,String Pwd) {
 		loginbutton.click();

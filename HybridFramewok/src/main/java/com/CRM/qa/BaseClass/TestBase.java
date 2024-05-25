@@ -2,14 +2,17 @@ package com.CRM.qa.BaseClass;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.CRM.qa.Utilities.WebDriverEventListner;
 
@@ -49,13 +52,13 @@ public class TestBase  {
 		driver = e_driver;
 		driver.manage().window().maximize();
 //		driver.manage().deleteAllCookies();
-//		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 //		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(property.getProperty("AppURL"));
 
 	}
 	 
-	 //@AfterMethod()
+	 @AfterMethod()
 	 public void teardown() {
 		 
 		 driver.quit();
