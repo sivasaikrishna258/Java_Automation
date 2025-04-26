@@ -3,7 +3,6 @@ package seleniumOperations;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,8 +29,7 @@ public class FindingBrokenLinks {
 		driver=new ChromeDriver();
 		driver.get("https://freecrm.com/");
 		driver.findElement(By.cssSelector("a[href*='ui'")).click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		
 	}
 	
