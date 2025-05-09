@@ -6,9 +6,7 @@ import java.util.List;
 
 /**
  * Use when you want to define natural sorting (like alphabetical, numeric) within the class itself.
-  ✅ When Collections.sort() does work without extra code
- * If you're sorting a list of built-in types like:
- Integer, String, Character
+  ✅ When Collections.sort() does work without extra cod If you're sorting a list of built-in types like:Integer, String, Character
  *Why? Because String already implements Comparable<String>, so Java knows how to compare them.
 
  ❌ When Collections.sort() does NOT work on its own

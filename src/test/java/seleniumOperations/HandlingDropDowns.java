@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class HandlingDropDowns {
@@ -19,7 +20,7 @@ WebDriver driver;
 		driver=new ChromeDriver();
 		driver.get("https://getbootstrap.com/docs/4.0/components/dropdowns/");
 		driver.manage().window().maximize();
-		
+
 //		WebElement dropdown=driver.findElement(By.id("oldSelectMenu"));
 //		Select test=new Select(dropdown);
 //		List<WebElement> l=test.getOptions();

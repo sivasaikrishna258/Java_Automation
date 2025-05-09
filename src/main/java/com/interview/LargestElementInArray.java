@@ -1,6 +1,6 @@
 package com.interview;
 
-public class LargestElementInArray {
+public class  LargestElementInArray {
 
 	public static void main(String[] args) {
 

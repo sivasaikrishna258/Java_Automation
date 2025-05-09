@@ -36,9 +36,10 @@ public class FindDuplicateCharactersAndWords {
         System.out.println("Duplicate words in string are ");
         for (Map.Entry<String,Integer> word:wordsMap.entrySet()){
             if(word.getValue()>1){
-                System.out.println(word.getKey());
+                System.out.println(word.getKey()+" "+word.getValue());
             }
         }
+
 
     }
 }

@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.example.comparableAndComparator.Comparing.byName;
-
+import static com.InterviewQueWithCollectionFramework.comparableAndComparator.Comparing.byName;
 public class ComparatorDemo {
     public static void main(String[] args) {
 
