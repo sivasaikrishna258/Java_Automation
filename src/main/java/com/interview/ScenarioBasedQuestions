@@ -1,0 +1,147 @@
+✅ Q: When you face a blocker issue, follow these steps:
+
+1. **Identify the Blocker**: Clearly define what the blocker is and how it is preventing progress. This could be a technical issue, a dependency, or a resource constraint.
+2. **Communicate**: Inform your team and stakeholders about the blocker. Transparency is crucial for collaborative problem-solving.
+3. **Gather Information**: Collect all relevant information about the blocker, including error messages, logs, and any related documentation.
+4. **Analyze the Impact**: Assess how the blocker affects the project timeline, deliverables, and team productivity.
+5. **Seek Help**: Reach out to team members, subject matter experts, or external resources who may have the knowledge or authority to help resolve the blocker.
+6. **Propose Solutions**: Brainstorm potential solutions or workarounds with your team. Consider the pros and cons of each option.
+7. **Implement a Solution**: Once a solution is agreed upon, implement it as quickly as possible. Ensure that all team members are aware of the changes.
+8. **Monitor Progress**: After implementing the solution, monitor the situation to ensure that the blocker is resolved and that no new issues arise.
+9. **Document the Resolution**: Record the details of the blocker and how it was resolved. This documentation can be useful for future reference and for preventing similar issues.
+
+
+✅ Q:When you find a bug on the last day of the life cycle, consider the following steps:
+
+1. **Assess the Severity**: Determine how critical the bug is. Is it a showstopper that affects core functionality, or is it a minor issue that can be deferred?
+2. **Communicate**: Inform your team and stakeholders about the bug immediately. Transparency is key to managing expectations.
+3. **Evaluate Impact**: Analyze how the bug impacts the overall project and whether it can be fixed in time without jeopardizing the release.
+4. **Prioritize**: If the bug is critical, prioritize it for fixing. If it’s minor, consider whether it can be documented and addressed in a future release.
+5. **Implement a Fix**: If time allows, implement a fix for the bug. Ensure that it is thoroughly tested to avoid introducing new issues.
+6. **Document**: Document the bug, the fix, and any implications for future releases. This will help in tracking and understanding the issue later.
+7. add this bug fix into the regression test suite: Ensure that the fix is included in the regression tests to prevent it from reoccurring in future releases.
+
+✅ Q: You have raised a bug but the developer says it’s not a bug. How do you handle it?
+1. **Review the Bug Report**: Revisit the bug report to ensure that it is clear, detailed, and includes all necessary information such as steps to reproduce, expected vs. actual results, and any relevant screenshots or logs.
+2. **Communicate with the Developer**: Engage in a constructive discussion with the developer. Ask for their perspective on why they believe it is not a bug and clarify any misunderstandings.
+3. **Provide Evidence**: If you still believe it is a bug, provide additional evidence or context that supports your claim. This could include user feedback, test cases, or references to requirements.
+4. **Seek Consensus**: Work towards a mutual understanding. If necessary, involve a third party, such as a team lead or project manager, to mediate the discussion and help reach a consensus.
+5. **Document the Outcome**: Regardless of the outcome, document the discussion and the final decision. This helps maintain a record for future reference and ensures transparency within the team.
+8. **Follow Up**: If the issue is still unresolved, follow up with the developer or team lead to ensure that it is addressed in a timely manner. Keep communication open and collaborative.
+
+✅ Q5: Developer gives you the build on the last day of the sprint. How will you test the feature?
+1. **Prioritize Testing**: Quickly assess the new feature and prioritize the most critical functionalities that need to be tested first. Focus on high-risk areas that could impact the overall application.
+2. **Create a Testing Plan**: Develop a concise testing plan that outlines the key test cases to be executed. Include both functional and non-functional tests if time permits.
+3. **Perform Smoke Testing**: Start with smoke testing to ensure that the build is stable and that the major functionalities are working as expected. This helps identify any critical issues early on.
+4. **Execute Test Cases**: Run the planned test cases, focusing on the new feature. Document any defects or issues encountered during testing.
+5. **Communicate Findings**: Share the results of your testing with the developer and the team. Highlight any critical issues that need immediate attention.
+6. **Retest After Fixes**: If any bugs are found, work with the developer to fix them and retest the affected areas as quickly as possible.
+7. **Document Everything**: Ensure that all test results, defects, and feedback are documented clearly. This will help in future sprints and provide a reference for the team.
+
+✅ 4. Tell me about a challenging automation task and how you solved it.
+S (Situation):
+While working on the SDS Lite UI project, I was assigned to automate a comprehensive new module that managed decision logic,
+including features like Policy Rules, Decision Reason Codes, and Class Sets. The module was still under development and
+only accessible via a direct URL, with no UI navigation available.
+
+T (Task):
+My goal was to ensure full manual and automated test coverage for this module, even as its features were being developed and
+released incrementally. There were no existing automation patterns or reusable components for this part of the application.
+
+A (Action):
+I started by manually mapping out the user flows and identifying key integration points between features.
+For automation, I initially used static selectors, but frequent UI changes made maintenance difficult.
+I adapted by implementing robust, dynamic selectors and modular test functions that could easily be updated as the UI evolved.
+ I also created utility methods for common actions across sub-features, which improved efficiency and consistency.
+
+R (Result):
+This approach allowed me to maintain stable and scalable automation scripts, even as the module changed rapidly.
+The framework I built enabled quick onboarding of new features and was later leveraged by the team for other modules.
+As a result, we achieved reliable test coverage and supported timely releases without major setbacks.
+
+🔹 1. Dynamic Web Elements / Flaky Locators
+🔹 2. Timing and Synchronization Issues
+
+
+✅ UI Testing Bug in Production :
+When a production bug is reported, my first step is to review the test scenarios written for that feature to verify whether the scenario was actually covered in our functional or regression suites.
+If the test is already covered, I check the CI/CD history — specifically, the last green build and identify when it started failing. I correlate that with any recent PR merges or deployments to see if the bug was introduced due to a code change.
+If it's not due to recent merges, I check for environment-specific issues by running the same test case in a staging or lower environment to rule out config issues or test flakiness.
+I then proceed with a detailed root cause analysis (RCA) — inspecting logs, server responses, frontend console errors (if UI-related), and any data-related dependencies that might be breaking the flow.
+Meanwhile, I make sure to collaborate with the dev team to give them exact reproduction steps, test data, and screenshots/logs — so the issue can be fixed quickly.
+After the fix is made, I ensure complete regression is done for related areas, and we update or add new test coverage if needed to prevent the issue from happening again.”
+
+
+A production bug was reported where users were unable to save changes in the Class Set feature,
+even though the UI showed a success message. My first step was to check our Cypress regression suite and confirm that
+we had a test for editing and saving Class Sets. The test had passed in the last green build,
+so I reviewed the CI/CD history and noticed that the failure started after a recent deployment that included a backend API update.
+To rule out environment issues, I ran the same Cypress test in our staging environment and found it failed there as well.
+I then checked the browser console and network logs, which revealed a 400 error from the save API due to a missing required field in the request payload—something that had changed in the backend contract.
+I immediately shared the reproduction steps, test data, and error logs with the development team.
+They quickly fixed the API contract and updated the frontend to match. After the fix,
+I ran a full regression on the Class Set module and added a new test to specifically check for required fields in the payload, ensuring this issue wouldn’t recur.
+
+
+
+
+
+🧠 1. How do you handle missed bugs in production? or Give an example of a time when your testing missed a bug. What did you learn?
+
+What they’re looking for: Accountability, RCA skills, how you prevent future issues.
+
+“Can you give an example of a time a bug escaped to production and how you handled it?”
+
+here tell about the decision reason codes add with filter applied in sds lite.
+
+
+📈 3. Describe a time when your testing improved product quality.
+What they’re looking for: Initiative, impact, ownership.
+
+“Tell me about a situation where your test cases caught a critical issue early.”
+here you should tell about the revert functionality broken in sds lite .
+
+
+🧪 6. Tell me about a time your tests failed, but the application was fine.
+What they’re looking for: Test design understanding, environment awareness.
+
+“What steps did you take to find the root cause?”
+
+
+Project :
+
+This project, PCSM Studio Lite UI, is a streamlined version of the PowerCurve Strategy Management Studio (PCSM).
+It is a decision management tool designed to simplify decision-making processes by providing a user-friendly interface
+for business users who need to make straightforward decisioning changes without requiring technical expertise.
+The application focuses on the UI component of PCSM Lite and depends on a backend service project for its functionality.
+it is used in an env where streamlined version of full SDS platform is sufficient
+
+1. Decision-Making Components
+These components are used to manage decision logic and configurations:
+
+Decision Reason Code
+Represents reasons for decisions.
+Used for categorizing and managing decision outcomes.
+
+Policy Rule
+Defines individual rules for decision-making.
+Includes conditions and actions.
+
+Policy Rule Set
+A collection of policy rules grouped together for easier management.
+
+Decision Setter
+Configures how decisions are set or applied.
+
+Decision Process Flow
+Represents the flow or sequence of decisions in a process.
+
+Class Set
+Represents a set of classifications or categories used in decision-making.
+Example: "Business Error Categories."
+
+
+bugs:
+add with filter applied in decision reason codes
+revert functionality broken in sds lite
+class set save functionality broken in sds lite

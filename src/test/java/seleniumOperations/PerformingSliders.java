@@ -23,10 +23,8 @@ public class PerformingSliders {
 		
 		WebElement min=driver.findElement(By.xpath("//div[@class='price-range-block']//span[1]"));
 		System.out.println(min.getLocation());
-		
 		Actions act=new Actions(driver);
 		act.dragAndDropBy(min, 100,0).perform();
-		
 		WebElement max=driver.findElement(By.xpath("//div[@class='price-range-block']//span[2]"));
 		act.dragAndDropBy(max, -100,0).perform();
 

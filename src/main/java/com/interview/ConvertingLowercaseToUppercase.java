@@ -1,6 +1,10 @@
 package com.interview;
 
-public class ConvertingLowecaseToUppercase {
+/**
+ * if u want to convert lower case to upper case then you need to subtract 32 from the ascii value of lower case letter
+ * if u want to convert upper case to lower case then you need to add 32 from the ascii value of upper case letter
+ */
+public class ConvertingLowercaseToUppercase {
 
 	public static void main(String[] args) {
 

@@ -1,7 +1,8 @@
 package com.interview;
 
-public class INterviewQuestion {
+public class FindNextAndPreviousCharacterOfDigitInString {
 
+	// Find the next and previous character of a digit in a string
 	public static void main(String[] args) {
 
 		String s="ab2gd7wm89qls9";

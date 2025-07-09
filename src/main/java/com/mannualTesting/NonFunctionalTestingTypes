@@ -1,0 +1,13 @@
+Non-Functional Testing:
+
+Non-Functional Testing refers to testing how the software performs rather than what it does. It validates aspects like speed,
+scalability, usability, reliability, and more — ensuring the system meets quality standards beyond just functional correctness.
+
+Types:
+1.Performance
+2.Security
+3.Usability
+4.Compatibility
+5.Accessibility
+6.Scalability
+7.Reliability

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Use when you want to define natural sorting (like alphabetical, numeric) within the class itself.
+ * Use Collection.sort() when you want to define natural sorting (like alphabetical, numeric) within the class itself.
   ✅ When Collections.sort() does work without extra cod If you're sorting a list of built-in types like:Integer, String, Character
  *Why? Because String already implements Comparable<String>, so Java knows how to compare them.
 
@@ -21,6 +21,20 @@ import java.util.List;
  * If the result is positive (> 0):
  * 👉 this comes after other
  */
+
+/** difference between comparable and comparator
+ *
+* Comparable is an interface that is used to define the natural ordering of objects of a class.
+* It is implemented by the class whose objects need to be compared.
+* It defines a single method compareTo(T o) that compares the current object with the specified object.
+
+* Comparator is an interface that is used to define a custom ordering of objects of a class.
+* It is implemented by a separate class that defines the comparison logic.
+ *  It defines two methods: compare(T o1, T o2) that compares two objects and equals(Object obj) that checks if two objects are equal.
+ *  The main difference between Comparable and Comparator is that Comparable is used to define the natural ordering of objects, while Comparator is used to define a custom ordering of objects.
+
+*/
+
 public class ComparableDemo {
     public static void main(String[] args) {
 

@@ -1,0 +1,23 @@
+✅ Difference Between Test Scenario and Test Case
+
+| Aspect             | **Test Scenario**                         | **Test Case**                                                                                                                    |
+| ------------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **Definition**     | A **high-level idea** of what to test     | A **detailed step-by-step** guide to test something                                                                              |
+| **Purpose**        | To ensure coverage of all functionalities | To ensure **each functionality works as expected**                                                                               |
+| **Detail Level**   | Broad and conceptual                      | Precise and thorough                                                                                                             |
+| **Example**        | "Verify login functionality"              | - Step 1: Go to login page<br>- Step 2: Enter valid credentials<br>- Step 3: Click login<br>- Expected: User should be logged in |
+| **Used By**        | Often by Business Analysts or QA leads    | QA/Test Engineers use them to write & execute tests                                                                              |
+| **Time to Create** | Faster                                    | Takes more time as it includes test data, steps, expected results                                                                |
+
+
+✅ Difference Between Test Plan and Test Strategy
+
+| Aspect              | **Test Plan**                                                                                                                        | **Test Strategy**                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| **Definition**      | A detailed **document describing how testing will be done** for a specific project or release                                        | A **high-level approach or guideline** for testing across all projects                      |
+| **Scope**           | Project-specific                                                                                                                     | Organization-wide or program-wide                                                           |
+| **Level of Detail** | Very detailed (includes test cases, schedule, resources)                                                                             | High-level and abstract                                                                     |
+| **Created By**      | Test Lead or QA Manager for a project                                                                                                | QA/Testing Manager or Director                                                              |
+| **Approved By**     | Project Manager / QA Lead                                                                                                            | Senior Management or Stakeholders                                                           |
+| **Includes**        | - Scope of testing<br>- Objectives<br>- Resources<br>- Schedule<br>- Types of testing<br>- Entry/Exit criteria<br>- Tools<br>- Risks | - Testing approach<br>- Standards<br>- Methodologies<br>- Tools & processes<br>- QA metrics |
+| **Flexibility**     | Changes with each project/release                                                                                                    | Stable across multiple projects                                                             |

@@ -1,0 +1,43 @@
+✅ Exactly! You got it right.
+
+Both Basic Auth and Preemptive Auth use the same authentication mechanism — HTTP Basic Authentication
+(i.e., sending username and password in a Base64-encoded format in the Authorization header).
+
+🔄 The only difference is when the credentials are sent:
+| Auth Type           | Sends Credentials Immediately? | Requires 401 First? | Number of Requests           |
+| ------------------- | ------------------------------ | ------------------- | ---------------------------- |
+| **Basic Auth**      | ❌ No                           | ✅ Yes               | 2 requests (initial + retry) |
+| **Preemptive Auth** | ✅ Yes                          | ❌ No                | 1 request                    |
+
+//non preemptive auth
+given()
+    .auth()
+    .basic("user", "pass") // Server may respond 401 first
+
+//preemptive auth
+given()
+    .auth()
+    .preemptive()
+    .basic("user", "pass") // Sends credentials immediately
+
+
+for passing bearer token in header we should pass like below:
+
+ * given()
+ *     .header("Authorization", "Bearer your_actual_token_here")
+ *     .when()
+ *     .get("/api/protected-resource")
+ *     .then()
+ *     .statusCode(200);
+
+
+| Auth Type       | Method / Syntax                              |
+| --------------- | -------------------------------------------- |
+| Basic Auth      | `.auth().basic()`                            |
+| Preemptive Auth | `.auth().preemptive().basic()`               |
+| Digest Auth     | `.auth().digest()`                           |
+| OAuth 1.0       | `.auth().oauth()`                            |
+| OAuth 2.0       | `.auth().oauth2()` or Bearer header          |
+| API Key         | `.header("x-api-key", "key")` or query param |
+
+

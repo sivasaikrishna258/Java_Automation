@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+
+
+
 public class Arraylist {
     public static void main(String[] args) {
 
-        List<Integer> ls = new ArrayList<>();
+        ArrayList<Integer> ls = new ArrayList<>();
+
 
         ls.add(3);
         ls.add(5);

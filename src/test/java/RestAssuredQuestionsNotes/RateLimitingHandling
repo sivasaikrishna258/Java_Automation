@@ -1,0 +1,37 @@
+✅ Strategies to Handle 429 Gracefully
+
+1️⃣ Respect the Retry-After Header (if provided)
+Most APIs include this header to indicate how long you should wait before retrying.
+
+if (response.statusCode() == 429) {
+    String retryAfter = response.getHeader("Retry-After");
+    if (retryAfter != null) {
+        Thread.sleep(Long.parseLong(retryAfter) * 1000);
+    }
+}
+
+
+2️⃣ Implement Retry Logic with Exponential Backoff
+Retry after waiting, increasing the wait time each time (1s → 2s → 4s ...)
+
+public Response retryWithBackoff(String url, int maxRetries) {
+    int retryCount = 0;
+    long waitTime = 1000; // 1 second
+
+    while (retryCount < maxRetries) {
+        Response response = given().when().get(url);
+        if (response.statusCode() != 429) return response;
+
+        try {
+            System.out.println("429 received. Retrying in " + waitTime + " ms...");
+            Thread.sleep(waitTime);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        waitTime *= 2; // exponential backoff
+        retryCount++;
+    }
+
+    throw new RuntimeException("Max retries exceeded due to 429 errors");
+}

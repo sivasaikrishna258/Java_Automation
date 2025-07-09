@@ -1,112 +1,167 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.Framewok</groupId>
-  <artifactId>HybridFrameworkUsingOOPSConcept</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <groupId>org.Framewok</groupId>
+    <artifactId>HybridFrameworkUsingOOPSConcept</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-  <build>
-	  <pluginManagement>
-		  <plugins>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-   				 <artifactId>maven-compiler-plugin</artifactId>
-   				 <version>3.11.0</version>
-   				 <configuration>
-						  <source>1.8</source>
-            			 <target>1.8</target>
-					</configuration>
-			</plugin>
-		 
-			 <plugin>
-			 	<groupId>org.apache.maven.plugins</groupId>
-    			<artifactId>maven-surefire-plugin</artifactId>
-   				 <version>3.1.0</version>
-   				 <configuration>
-						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
-						</suiteXmlFiles>
-					</configuration>
-			 </plugin>
-		  </plugins>
-	  </pluginManagement>
-	  
-  </build>
+    <build>
+        <pluginManagement>
+            <plugins>
 
-  <dependencies>
-    <dependency>
-  		<groupId>org.seleniumhq.selenium</groupId>
-  		<artifactId>selenium-java</artifactId>
-  		<version>4.14.1</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.testng</groupId>
-  		<artifactId>testng</artifactId>
-  		<version>6.9.10</version>
-  	</dependency>
-  	<dependency>
-			<groupId>com.relevantcodes</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>2.41.2</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.16-beta2</version>
-		</dependency>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <source>11</source>
+                        <target>11</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                        <includes>
+                            <include>**/*Test.java</include>
+                        </includes>
+                        <!--					 <properties>		-->
+                        <!--							<property>-->
+                        <!--								<name>listener</name>-->
+                        <!--								<value>com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter</value>-->
+                        <!--							</property>-->
+                        <!--					 							<property>-->
+                        <!--								<name>trimStackTrace</name>-->
+                        <!--								<value>false</value>-->
+                        <!--					 							</property>-->
+                        <!--					 <property>-->
+                        <!--								<name>reportName</name>-->
+                        <!--								<value>Extent Report</value>-->
+                        <!--							</property>-->
+                        <!--					 						<property>-->
+                        <!--								<name>reportTitle</name>-->
+                        <!--								<value>Extent Report</value>-->
+                        <!--					 							</property>-->
+                        <!--					 </properties>-->
+                        <!--					 <systemPropertyVariables>-->
+                        <!--							<property>-->
+                        <!--								<name>reportPath</name>-->
+                        <!--								<value>target/surefire-reports/ExtentReport.html</value>-->
+                        <!--							</property>-->
+                        <!--					 							<property>-->
+                        <!--								<name>reportConfig</name>-->
+                        <!--								<value>src/test/resources/extent-config.xml</value>-->
+                        <!--					 							</property>-->
+                        <!--					 						<property>-->
+                        <!--								<name>reportOutputDirectory</name>-->
+                        <!--					 								<value>target/surefire-reports</value>-->
+                        <!--					 							</property>-->
+                        <!--					 </systemPropertyVariables>-->
+                        <!--					 -->
+                        <!--					 <forkCount>1</forkCount>-->
+                        <!--					 <reuseForks>true</reuseForks>-->
+                        <!--					 <parallel>methods</parallel>-->
+                        <!--					 <threadCount>2</threadCount>-->
+                        <!--					 <testFailureIgnore>true</testFailureIgnore>-->
+                        <!--					 <useUnlimitedThreads>true</useUnlimitedThreads>-->
+                        <!--					 <runOrder>alphabetical</runOrder>-->
+                        <!--					 <skip>false</skip>-->
+                        <!--					 <redirectTestOutputToFile>true</redirectTestOutputToFile>-->
+                        <!--					 <reportsDirectory>target/surefire-reports</reportsDirectory>-->
+                        <!--					 <reportFormat>xml</reportFormat>-->
+                        <!--					 <testFailureIgnore>true</testFailureIgnore>-->
+                        <!--					 <useFile>false</useFile>-->
+                        <!--					 <useSystemClassLoader>false</useSystemClassLoader>-->
+                        <!--					 <useManifestOnlyJar>false</useManifestOnlyJar>-->
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.14.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.10</version>
+        </dependency>
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+
+        <!--		<dependency>-->
+        <!--			<groupId>org.apache.poi</groupId>-->
+        <!--			<artifactId>poi</artifactId>-->
+        <!--			<version>3.16-beta2</version>-->
+        <!--		</dependency>-->
 
 
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.9</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml-schemas</artifactId>
-			<version>3.9</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-scratchpad</artifactId>
-			<version>3.9</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>ooxml-schemas</artifactId>
-			<version>1.1</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>ooxml-schemas</artifactId>
+            <version>1.1</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>openxml4j</artifactId>
-			<version>1.0-beta</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.9</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.6</version>
-		</dependency>
-		<dependency>
-  		<groupId>com.aventstack</groupId>
-  		<artifactId>extentreports</artifactId>
-  		<version>3.1.5</version>
-  	</dependency>
-  	<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-<dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>5.8.0</version>
-</dependency>
-
-  </dependencies>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>openxml4j</artifactId>
+            <version>1.0-beta</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+    </dependencies>
 </project>

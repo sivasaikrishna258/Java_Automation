@@ -1,6 +1,7 @@
 package seleniumOperations;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,19 +25,30 @@ public class CheckBoxesAndRadioButtons {
 		
 		WebElement e=driver.findElement(By.xpath("//span[@class='rbIcon p-icon p-i-radio-checked rbToggleRadioChecked']"));
 		boolean b=e.isSelected();
+		
+
 		if(!b) {
 			e.click();
 		}
 	}
-		
-		public static void selectMultipleCheckBox() {
-			driver.get("https://www.techlistic.com/p/selenium-practice-form.html");
-			driver.findElement(By.xpath("//input[@type='checkbox'][1]")).click();
 
-			
-			
-//			for(int i=0;i<3;i++) {
-//			driver.findElement(By.xpath("//input[@name='tool'][i]")).click();
-//		}
+	/**
+	 * ✅ Example – Select Only Specific Checkboxes
+	 * Let’s say you want to select checkboxes with value Java, Python:
+	 */
+	public static void selectMultipleCheckBox() {
+			List<WebElement> checkboxes = driver.findElements(By.name("skills"));
+
+			for (WebElement checkbox : checkboxes) {
+				String value = checkbox.getAttribute("value");
+				if ((value.equals("Java") || value.equals("Python")) && !checkbox.isSelected()) {
+					checkbox.click();
+				}
+			}
+
 		}
+
+
 }
+
+

@@ -1,0 +1,98 @@
+2. How do you chain API requests (using data from one API in another)?
+
+| Approach                                       | When to Use                        |
+| ---------------------------------------------- | ---------------------------------- |
+| Extract value using `.path()` or `.jsonPath()` | To get a token, id, username, etc. |
+| Pass as `pathParam`, `queryParam`, or header   | Depends on endpoint design         |
+| Store in reusable `Map` or context object      | For Cucumber or TestNG frameworks  |
+| Use `@BeforeMethod` or `@Before` hook          | To create pre-requisite data       |
+
+**************************************************************************************************************************************
+
+3. how to perform upload and download operations in Rest Assured?
+
+| Operation | Method                        | Description |
+| --------- | ------                        | ----------- |
+| Upload    | `multiPart()`                 | Use for file uploads, e.g., `given().multiPart("file", new File("path/to/file")).post("/upload")` |
+| Download  | `get()` with file output      | Use to download files, e.g., `given().get("/download").then().extract().asFile("path/to/save/file")` |
+
+another way is
+| Task          | Method                        |
+| ------------- | ----------------------------- |
+| Upload file   | `POST` with `.multiPart()`    |
+| Download file | `GET` and `.asByteArray()`    |
+| Save file     | `Files.write(...)` (Java NIO) |
+
+actually we don't need to perform this kind of operation unless it is part of regression since these kind of operations will be coverd
+in UI automation.
+
+*************************************************************************************************************************************************
+
+✅ What is API Versioning?
+API versioning is the practice of managing multiple versions of an API so that changes to the API do not break existing clients.
+
+It allows you to:
+
+Introduce new features
+
+Fix bugs
+
+Modify response structures
+...without affecting users depending on older versions.
+
+✅ Common API Versioning Methods
+
+| Method                  | Example URL / Usage                        | Notes                                          |
+| ----------------------- | ------------------------------------------ | ---------------------------------------------- |
+| **URI Versioning**      | `GET /api/v1/users`                        | Most common, easy to manage                    |
+| **Header Versioning**   | `Accept: application/vnd.myapi.v2+json`    | Clean URLs, flexible, but harder to test/debug |
+| **Query Param**         | `GET /api/users?version=2`                 | Easy but less RESTful                          |
+| **Content Negotiation** | Based on `Accept` or `Content-Type` header | Advanced but rarely used fully                 |
+
+*******************************************************************************************************************************************
+
+2. How do you handle rate limiting and throttling in APIs?
+
+| Concept           | Definition                                                                                                                                                                                 |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Rate Limiting** | A hard limit on how many API requests can be made in a **time window** (e.g., 100 requests per minute). If exceeded, requests are **rejected** (usually with HTTP 429).                |
+| **Throttling**    | A **control mechanism** to **slow down** the request rate (not block), often to ensure fair use or avoid overloading the server. Requests may be **delayed** but not necessarily rejected. |
+| **Implementation** | Use headers like `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `Retry-After` to inform clients about limits and when they can retry. Implement logic to handle these headers in your code. |
+
+********************************************************************************************************************************************
+
+2. How do you differentiate if the failure is due to test code or the actual API?
+
+
+| Check                            | Test Issue ✅ | API Issue ✅ |
+| -------------------------------- | ------------ | ----------- |
+| Incorrect payload/headers        | ✅            | ❌           |
+| Invalid request path/params      | ✅            | ❌           |
+| Test fails, Postman passes       | ✅            | ❌           |
+| Test + Postman both fail         | ❌            | ✅           |
+| API returns 500/503              | ❌            | ✅           |
+| Test assertion expects wrong key | ✅            | ❌           |
+| Logs show empty/malformed token  | ✅            | ❌           |
+| Auth token expired               | ✅ (setup)    | ❌           |
+
+
+✅ How would you handle API responses that return different data types dynamically for the same field?
+
+we have to use jsonnode methods to validate the response dynamically. For example, if a field can return either a string or an integer, you can use `JsonNode` methods to check the type before processing it.
+| Approach                     | Description                                                                                   |
+| ---------------------------- | --------------------------------------------------------------------------------------------- |
+| Use `JsonNode`               | Parse the response into a `JsonNode` object to handle dynamic types.                          |
+| Check type with `isTextual()` | Use `node.isTextual()` for strings and `node.isInt()` for integers to determine the type.   |
+| Use `asText()` or `asInt()`   | Convert the node to the appropriate type based on the check.                                  |
+| Example                      | ```java<br>JsonNode node = response.jsonPath().get("field");<br>if (node.isTextual()) {<br>    String value = node.asText();<br>} else if (node.isInt()) {<br>    int value = node.asInt();<br>}<br>``` |
+| Use `instanceof`             | If using Java objects, check the type with `instanceof` before casting.                        |
+
+
+✅ 13) How to Automate Unauthorized Access Scenarios Using Rest Assured
+These scenarios test whether your API correctly blocks:
+
+Access without tokens
+
+Invalid or expired tokens
+
+Access to restricted endpoints with insufficient roles

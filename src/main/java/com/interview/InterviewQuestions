@@ -1,0 +1,117 @@
+
+
+diff 401 and 403
+diff b/w put and patch
+diff authentications
+dif authentication and authorization
+how to handle dynamic webElement in selenium(using xpath axes ,functions and waits)
+invocation count
+revert and reset
+how to resolve merge conflicts
+hooks
+use of background
+absolute and relative xpath
+disadvantages of implicit wait
+xpath axes and functions
+
+5️⃣ Is it possible to validate Captcha using Selenium? If yes, how?
+no
+
+6️⃣ What should be the ideal way to store data using Selenium WebDriver only?
+using proprties file,csv.excel file
+
+8️⃣ What happens if you receive browser notifications during test automation execution?
+by using chrome options we can disable browser notifications
+ex: addArguments("--disable-notifications")
+
+🔟 What is Invalid Certificate Exception?
+Invalid Certificate Exception occurs when the browser encounters a security certificate that is not valid or trusted. This can happen if the certificate has expired, is self-signed, or is issued by an untrusted authority. In Selenium, you can handle this exception by configuring the browser to ignore certificate errors.
+ChromeOptions options = new ChromeOptions();
+options.setAcceptInsecureCerts(true); // Accepts insecure SSL
+options.addArguments("--ignore-certificate-errors");
+
+4️⃣ How can we add validation points in Postman?
+In Postman, you can add validation points using tests written in JavaScript. After sending a request, you can write assertions to validate the response. For example, you can check the status code, response time, and specific values in the response body or headers.
+its like assertions
+
+5️⃣ What do you understand by server-side validation?
+5️⃣ Server-side validation refers to validating user input or request data on the server, after the data is submitted from the frontend or client.
+
+✅ The threadPoolSize attribute in TestNG is used to enable parallel execution of a test method by specifying the number of threads that should run that method simultaneously.
+| Attribute         | Purpose                                          |
+| ----------------- | ------------------------------------------------ |
+| `invocationCount` | Number of times the test method will run         |
+| `threadPoolSize`  | Number of parallel threads to use for running it |
+
+❓ Can we override a constructor in Java?
+
+❌ No, we cannot override a constructor in Java.
+
+🔍 Why Not?
+Constructors are not inherited, and overriding only applies to inherited methods.
+
+Since constructors are class-specific and not part of the object's polymorphic behavior, you can't override them in a subclass.
+
+🧰 Common Types of Jenkins Parameters
+
+1. Boolean Parameter
+Keyword: booleanParam
+Description: Checkbox for true/false selection.
+Examples in your file:
+DRY_RUN
+build
+combineVeracodeScan
+forceBuild
+CYPRESS_Mock_Tests
+CYPRESS_Integration_Tests
+CYPRESS_UI_Performance_Tests
+CYPRESS_System_Performance_Tests
+TESTRAIL_TEST_SYNC_ENABLED (conditionally)
+TESTRAIL_RESULTS_IMPORT (conditionally)<!-- - `A11Y_Check` (commented out) -->
+
+2. Choice Parameter
+Keyword: choice
+Description: Dropdown to select from a list of options.
+Examples in your file:
+builderMode (Performance, Normal)
+clusterType (EODS, SIT)
+
+3. String Parameter
+Keyword: string
+Description: Text input for user-defined values.
+Examples in your file:
+CYPRESS_Performance_Iterations
+CYPRESS_Login_URL
+CYPRESS_Env_Domain
+CYPRESS_Tags
+TESTRAIL_Milestone_ID (conditionally)
+TESTRAIL_Test_Run_NAME (conditionally)
+
+### SQL Joins Explained
+
+| Join Type       | Description                          |
+| --------------- | ------------------------------------ |
+| INNER JOIN      | Only matching rows                   |
+| LEFT JOIN       | All from left + matching right       |
+| RIGHT JOIN      | All from right + matching left       |
+| FULL OUTER JOIN | All from both, matched or unmatched  |
+| CROSS JOIN      | All combinations (Cartesian product) |
+| SELF JOIN       | Join a table to itself               |
+
+🧠 Summary:
+
+| Part            | Meaning                                  |
+| --------------- | ---------------------------------------- |
+| `public`        | Accessible by JVM                        |
+| `static`        | No object needed to run `main()`         |
+| `void`          | Main doesn’t return any value            |
+| `String[] args` | Command-line arguments passed at runtime |
+
+
+ You have 3 frames(Frame A, Frame B, Frame C).After clicking Frame C, the application opens another tab containing a login, password, and sign-in function ? Write the Selenium automation script for this scenario ?
+
+Switch to Frame A
+Switch to Frame B
+Switch to Frame C
+
+then click on the element that opens new tab and switch to orginal frame using defaultcontent() then perform getwindow handles and switch

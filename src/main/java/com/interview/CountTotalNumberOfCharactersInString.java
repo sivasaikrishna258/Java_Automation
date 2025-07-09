@@ -12,7 +12,8 @@ public class CountTotalNumberOfCharactersInString {
 			c++;
 			}
 		}
-		System.out.println(c);
+		System.out.println(c); // count of characters without space
+		System.out.println(s.length());// count of characters with space
 	}
 
 }

@@ -10,8 +10,10 @@
   
   <test name="Test1">
     <classes>
-      <class name="TestNGFeatures.annoationsEx"/>
-     
+
+      <class name="TestNGFeatures.annoationsEx">
+      </class>
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

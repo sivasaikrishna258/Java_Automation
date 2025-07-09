@@ -13,7 +13,7 @@ public class StaticKeywordExample {
         StaticKeywordExample1 s1=new StaticKeywordExample1("sai",25);
 
         System.out.println(s.toString());
-        System.out.println(s1);
+        System.out.println(s1); //output :
 
         StaticKeywordExample1.companyName="startup";
         System.out.println(s.toString());

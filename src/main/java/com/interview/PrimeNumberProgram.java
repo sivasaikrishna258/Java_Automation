@@ -4,7 +4,7 @@ public class PrimeNumberProgram {
 
 	public static void main(String[] args) {
 
-		int n=123,flag=0;
+		int n=3,flag=0;
 		int m=n/2;
 		System.out.println(m);
 		 if(n==0||n==1) {
@@ -20,10 +20,11 @@ public class PrimeNumberProgram {
 				 }
 				 
 			 }
-			 if(flag==0) {
-				 System.out.println(n+" is prime number");
-			 }
+
 		 }
+		if(flag==0) {
+			System.out.println(n+" is prime number");
+		}
 	}
 
 }

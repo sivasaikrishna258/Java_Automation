@@ -31,7 +31,7 @@ public class assertionsEx {
 		as.assertEquals("google", driver.getTitle());
 		
 		driver.findElement(By.xpath("//input[@class='inputtext _55r1 _6luy']")).sendKeys("axd");
-		as.assertAll();
+		as.assertAll(); //this line will throw the error if any assertion fails at the end of the test
 
 		
 	}

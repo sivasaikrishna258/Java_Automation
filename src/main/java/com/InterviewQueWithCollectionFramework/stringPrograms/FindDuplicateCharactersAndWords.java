@@ -3,6 +3,23 @@ package com.InterviewQueWithCollectionFramework.stringPrograms;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * | Method                                    | Description                                                                |
+ * | ----------------------------------------- | -------------------------------------------------------------------------- |
+ * | `append(String str)`                      | Appends the specified string to this character sequence.                   |
+ * | `insert(int offset, String str)`          | Inserts the string into this character sequence at the specified position. |
+ * | `replace(int start, int end, String str)` | Replaces characters from `start` to `end` with the given string.           |
+ * | `delete(int start, int end)`              | Removes characters from the sequence from `start` to `end`.                |
+ * | `deleteCharAt(int index)`                 | Removes the character at the specified index.                              |
+ * | `reverse()`                               | Reverses the current string.                                               |
+ * | `length()`                                | Returns the number of characters in the sequence.                          |
+ * | `capacity()`                              | Returns the current capacity of the buffer.                                |
+ * | `charAt(int index)`                       | Returns the character at the specified index.                              |
+ * | `setCharAt(int index, char ch)`           | Sets the character at the specified index.                                 |
+ * | `substring(int start)`                    | Returns a substring starting from the specified index.                     |
+ * | `substring(int start, int end)`           | Returns a substring from `start` to `end`.                                 |
+ * | `toString()`                              | Converts the StringBuffer to a string.                                     |
+ */
 public class FindDuplicateCharactersAndWords {
     public static void main(String[] args) {
 
@@ -23,6 +40,7 @@ public class FindDuplicateCharactersAndWords {
                 System.out.println(characterIntegerEntry.getKey());
             }
         }
+
 
         //print duplicate words
         String s1="siva Sai krishna sai krishna";

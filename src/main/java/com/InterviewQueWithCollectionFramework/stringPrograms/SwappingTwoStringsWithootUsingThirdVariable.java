@@ -12,5 +12,12 @@ public class SwappingTwoStringsWithootUsingThirdVariable {
 
         System.out.println(s1 +"\n"+s2);
 
+
+        //without using third variable
+        String s="siva", s4 ="sai";
+        s= s + s4;
+        s4 =s.substring(0, s.length() - s4.length());
+        s=s.substring(s4.length());
+        System.out.println(s);
     }
 }

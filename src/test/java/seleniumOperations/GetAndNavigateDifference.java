@@ -7,6 +7,15 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/**
+ * Both use the browser's navigation history.
+ * The difference is not technical in terms of memory or browser state, but semantic and API design-based in Selenium.
+ *
+ * 🔄 Real-World Analogy:
+ * get() is like typing a URL into the browser’s address bar and hitting Enter.
+ *
+ * navigate().to() is like a user clicking links, then using the browser back/forward buttons — all in a single, coordinated flow.
+ */
 public class GetAndNavigateDifference {
 
 	@Test

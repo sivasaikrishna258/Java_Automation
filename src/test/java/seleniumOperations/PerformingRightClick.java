@@ -3,6 +3,7 @@ package seleniumOperations;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,7 +23,6 @@ public class PerformingRightClick {
 		WebElement doubleclick=driver.findElement(By.xpath("//span[contains(text(),'right click me')]"));
 		
 		Actions act=new Actions(driver);
-		
 		//performing rightclick click operation
 		act.contextClick(doubleclick).perform();
 		

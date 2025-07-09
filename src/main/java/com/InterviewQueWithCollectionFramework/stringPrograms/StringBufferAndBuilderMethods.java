@@ -1,6 +1,9 @@
 package com.InterviewQueWithCollectionFramework.stringPrograms;
 
-/**
+//both StringBuffer and StringBuilder are used to create mutable strings
+//they are same but StringBuffer is synchronized and StringBuilder is not synchronized
+/** ✅ StringBuilder Class Methods
+
  * | **Method**                            | **Description**                                              | **Example**                 |
  * | ------------------------------------- | ------------------------------------------------------------ | --------------------------- |
  * | `append(String str)`                  | Adds a string (or any value) to the end of the buffer.       | `sb.append(" World")`       |
@@ -17,12 +20,31 @@ package com.InterviewQueWithCollectionFramework.stringPrograms;
  * | `substring(int start)`                | Returns substring from `start` to end.                       | `sb.substring(6)`           |
  * | `substring(int start, int end)`       | Returns substring from `start` to `end - 1`.                 | `sb.substring(0, 5)`        |
  */
-public class StringBufferAndBuilder {
+
+/** StringBuffer class methods
+ | Method                                    | Description                                                                |
+ | ----------------------------------------- | -------------------------------------------------------------------------- |
+ | `append(String str)`                      | Appends the specified string to this character sequence.                   |
+ | `insert(int offset, String str)`          | Inserts the string into this character sequence at the specified position. |
+ | `replace(int start, int end, String str)` | Replaces characters from `start` to `end` with the given string.           |
+ | `delete(int start, int end)`              | Removes characters from the sequence from `start` to `end`.                |
+ | `deleteCharAt(int index)`                 | Removes the character at the specified index.                              |
+ | `reverse()`                               | Reverses the current string.                                               |
+ | `length()`                                | Returns the number of characters in the sequence.                          |
+ | `capacity()`                              | Returns the current capacity of the buffer.                                |
+ | `charAt(int index)`                       | Returns the character at the specified index.                              |
+ | `setCharAt(int index, char ch)`           | Sets the character at the specified index.                                 |
+ | `substring(int start)`                    | Returns a substring starting from the specified index.                     |
+ | `substring(int start, int end)`           | Returns a substring from `start` to `end`.                                 |
+ | `toString()`                              | Converts the StringBuffer to a string.                                     |
+
+ *
+ */
+public class StringBufferAndBuilderMethods {
 
     public static void main(String[] args) {
 
         StringBuffer s=new StringBuffer();
-
         s.append("siva");
         s.append("sai");
         System.out.println(s);
@@ -32,6 +54,7 @@ public class StringBufferAndBuilder {
         System.out.println("mormal string is "+ str);
 
         //convert stringbuffer to string[] is performed by split method
+
 
 
     }

@@ -1,0 +1,91 @@
+| Command             | From ➝ To                                     |
+| ------------------- | --------------------------------------------- |
+| `git init`          | 📁 Create empty **Working Dir + Local Repo**  |
+| `git clone`         | Remote Repo ➝ Local Repo + Working Dir        |
+| `git add`           | Working Directory ➝ Staging Area              |
+| `git status`        | ✅ Show status of files in all stages          |
+| `git diff`          | Compare Working Dir ↔ Staging Area            |
+| `git diff --staged` | Compare Staging Area ↔ Local Repo             |
+| `git commit`        | Staging Area ➝ Local Repository               |
+| `git log`           | View commits in Local Repository              |
+| `git push`          | Local Repository ➝ Remote Repository          |
+| `git pull`          | Remote Repo ➝ Local Repo + Working Dir        |
+| `git fetch`         | Remote Repo ➝ Local Repo (not Working Dir)    |
+| `git merge`         | Merge branch commits in Local Repository      |
+| `git reset --soft`  | Local Repo ➝ Staging Area                     |
+| `git reset --mixed` | Local Repo ➝ Working Dir + unstaged           |
+| `git reset --hard`  | Local Repo ➝ Overwrite Staging + Working Dir  |
+| `git checkout`      | HEAD switch ➝ Update Working Dir              |
+| `git stash`         | Working Dir + Staging Area ➝ Temp storage     |
+| `git stash apply`   | Temp stash ➝ Working Dir (and/or Staging)     |
+| `git branch`        | Manage branches in Local Repo                 |
+| `git tag`           | Mark commits in Local Repo                    |
+| `git revert`        | Commit new changes that undo previous commit  |
+| `git rm`            | Remove file from Staging and/or Working Dir   |
+| `git clean`         | Remove untracked files from Working Directory |
+| `git cherry-pick`   | Apply specific commit from one branch to another |
+| `git rebase`        | Reapply commits on top of another base branch |
+
+| Reset Type      | Command                      | What It Does                                                                 |
+| --------------- | ---------------------------- | ---------------------------------------------------------------------------- |
+| **Soft Reset**  | `git reset --soft <commit>`  | Moves HEAD to the given commit. Keeps changes in **staging + working dir**.  |
+| **Mixed Reset** | `git reset --mixed <commit>` | (Default) Moves HEAD. Clears **staging**, keeps changes in working dir.      |
+| **Hard Reset**  | `git reset --hard <commit>`  | Moves HEAD. **Deletes all changes** from staging & working dir. ❗Destructive |
+
+
+git ammend:
+
+git commit -m "Initial commit"
+# Oops, forgot to add a file
+
+git add config.yaml
+
+git commit --amend --no-edit
+# This will add the changes in config.yaml to the last commit without changing the commit message.
+
+If you already pushed the commit and then amend it:
+
+git push --force-with-lease
+--force-with-lease is safer than --force because it checks that the remote branch has not been updated since you last fetched it. If it has, the push will be rejected, preventing you from overwriting someone else's work.
+
+
+Remote Repo (GitHub/GitLab)
+        ▲
+        │   git push/pull
+        ▼
+Local Repo (Commits/History)
+        ▲
+        │   git commit
+        ▼
+Staging Area (Index)
+        ▲
+        │   git add
+        ▼
+Working Directory (Your actual code)
+
+
+🔁 git rebase
+✅ What It Does:
+rebase moves or reapplies a series of commits from one branch onto another base.
+
+🔍 Use Case:
+When you want to make your feature branch look like it was based off the latest main branch (i.e., clean, linear history).
+
+🧪 Example:
+bash
+Copy
+Edit
+# Suppose you're on 'feature' and want to rebase onto 'main'
+git checkout feature
+git rebase main
+This means:
+
+"Take all commits from feature, and replay them on top of the latest main."
+
+
+git reset:
+| Command             | What it Resets             | Working Dir | Use Case                                 |
+| ------------------- | -------------------------- | ----------- | ---------------------------------------- |
+| `git reset --soft`  | HEAD only                  | ✅ Keeps     | Undo commit, keep staged                 |
+| `git reset --mixed` | HEAD + Index (default)     | ✅ Keeps     | Uncommit + unstage, but keep changes     |
+| `git reset --hard`  | HEAD + Index + Working Dir | ❌ Discards  | Completely undo commit + code changes ⚠️ |

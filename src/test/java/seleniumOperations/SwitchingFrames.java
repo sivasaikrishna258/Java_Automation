@@ -7,6 +7,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * ✅ Steps to handle multiple frames:
+ * Identify the frame (by index, name/id, or WebElement).
+ *
+ * Switch to it using driver.switchTo().frame(...).
+ *
+ * Perform your actions inside the frame.
+ *
+ * Switch back to the main content using driver.switchTo().defaultContent().
+ */
+
+/**
+ * ✅ Java Selenium Code to Handle Nested Frames:
+ *
+ // Switch to outer frame first
+ driver.switchTo().frame("frame1");
+
+ // Now switch to inner frame
+ driver.switchTo().frame("frame2");
+
+ // Perform action inside the innermost frame
+ driver.findElement(By.id("btn")).click();
+
+ // Optional: Switch back to the main (default) page
+ driver.switchTo().defaultContent();
+
+ */
+
 public class SwitchingFrames {
 
 	public static void main(String[] args) {
@@ -30,7 +58,7 @@ public class SwitchingFrames {
 		
 		String s= driver.switchTo().frame(outerframe).getTitle();
 		System.out.println(s);
-		
+
 		String s1=driver.switchTo().frame(driver.findElement(By.xpath("//iframe[normalize-space()='<p>Your browser does not support iframes.</p>']"))).getTitle();
 		System.out.println(s1);
 		

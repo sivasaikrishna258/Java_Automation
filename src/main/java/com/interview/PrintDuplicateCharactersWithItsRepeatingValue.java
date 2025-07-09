@@ -23,3 +23,6 @@ public class PrintDuplicateCharactersWithItsRepeatingValue {
         System.out.println(stringBuilder);
     }
 }
+
+//output of the above program
+// a2c2w3d2n1j1

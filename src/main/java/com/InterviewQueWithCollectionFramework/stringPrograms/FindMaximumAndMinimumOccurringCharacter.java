@@ -7,6 +7,7 @@ public class FindMaximumAndMinimumOccurringCharacter {
     public static void main(String[] args) {
 
         String s = "sivasaikkk";
+
         Map<Character, Integer> characterIntegerMap = new HashMap<>();
 
         for (char c : s.toCharArray()) {

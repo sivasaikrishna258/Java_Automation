@@ -31,6 +31,7 @@ public class SmallestAndLargestPalindrome {
 
         String[] s2 = reverse.toString().split(" ");
 
+        //the reason we are converting to string is we cant perform comparison between stringbuilder/buffer with string it will give false even data is same
         String small ,large;
         small=large=s2[0];
         for(int i=0;i<s2.length;i++){

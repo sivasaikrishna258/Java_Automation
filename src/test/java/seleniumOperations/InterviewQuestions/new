@@ -1,0 +1,12 @@
+ Comparison Table: private vs static Methods in Java
+
+ | Feature                        | `private` Methods                    | `static` Methods                              |
+ | ------------------------------ | ------------------------------------ | --------------------------------------------- |
+ | Can be overridden?         | ❌ No (Not inherited by subclass)        | ❌ No (Method hiding, not overriding)      |
+ | Can be overloaded?         | ✅ Yes (Within the same class)           | ✅ Yes (Like any other method)             |
+ | Belong to                  | Instance of a class                       | The class itself                              |
+ | Inheritance visibility     | ❌ Not visible to subclasses             | ✅ Visible, but not polymorphic                |
+ | Polymorphism support?      | ❌ No (Not even visible to subclass)     | ❌ No (Resolved at compile time, not runtime)  |
+ | Can use `super` keyword?   | ❌ No (Not accessible)                   | ❌ No (static context can't use `super`)       |
+ | Can be called with object? | ✅ Yes (but usually avoided)             | ✅ Yes (but should be called with class name)  |
+ | Typical use case           | Internal helper methods                   | Utility methods or shared class functionality |

@@ -1,5 +1,6 @@
 package com.InterviewQueWithCollectionFramework.stringPrograms;
 
+
 public class ConvertingToLowerCaseUsingStringBuffer {
     public static void main(String[] args) {
         String s="Sivasai";
@@ -15,7 +16,7 @@ public class ConvertingToLowerCaseUsingStringBuffer {
                 b.setCharAt(i,Character.toUpperCase(s.charAt(i)));
             }
         }
-        System.out.println(b);
+        System.out.println(b); //output: SIVASAI
 
         String s1="Sivasai";
         StringBuffer b1=new StringBuffer(s1);

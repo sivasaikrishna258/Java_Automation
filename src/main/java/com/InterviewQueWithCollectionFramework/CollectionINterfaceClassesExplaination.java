@@ -41,4 +41,24 @@ public class CollectionINterfaceClassesExplaination {
      * | **Hashtable**         | Thread-safe legacy alternative to `HashMap`           | Fully synchronized; slower                    |
      * | **ConcurrentHashMap** | When you need high-performance thread-safe map        | Read/write operations can happen concurrently |
      */
-}
+
+
+
+
+    /**
+
+     | Requirement                 | Recommended Class                                                           |
+     | --------------------------- | --------------------------------------------------------------------------- |
+     | Maintain order of insertion | `LinkedHashMap`, `LinkedHashSet`, `ArrayList`                               |
+     | Sorted data                 | `TreeMap`, `TreeSet`                                                        |
+     | Unique elements             | `HashSet` or `TreeSet`                                                      |
+     | Fast lookup by key          | `HashMap`                                                                   |
+     | Stack structure             | `ArrayDeque` (modern) or `Stack` (legacy)                                   |
+     | Queue with priority         | `PriorityQueue`                                                             |
+     | Thread-safe map             | `ConcurrentHashMap`                                                         |
+     | Thread-safe list            | `Collections.synchronizedList(new ArrayList<>())` or `CopyOnWriteArrayList` |
+*/
+
+
+
+     }

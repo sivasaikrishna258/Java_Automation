@@ -9,6 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
+/**
+ * Actions class has different methods which includes dragAndDrop, moveToElement for mouse over, scrollToElement() for scrolling
+ */
 public class MouseOverOperations {
 
 	public static void main(String[] args) {
@@ -19,12 +22,12 @@ public class MouseOverOperations {
 		
 		driver.get("https://stqatools.com/demo/DoubleClick.php");
 		driver.manage().window().maximize();
-		
 		WebElement Douu=driver.findElement(By.xpath("//button[contains(text(),'Click Me / Double Click Me!')]"));
-		
+
 //		//perform double click
 		Actions act=new Actions(driver);
 		act.doubleClick(Douu).perform();
+
 		
 		//drag and drop
 		driver.get("https://stqatools.com/demo/Drag&Drop.php");
@@ -33,11 +36,10 @@ public class MouseOverOperations {
 		
 		//approach1
 		act.dragAndDrop(source, dest).perform();
-		
 		//approach2
 		Action action=act.clickAndHold(source).moveToElement(dest).release(dest).build();
 		action.perform();
-		
+
 		//MouseOverOnTheElement
 		
 		driver.get("https://stqatools.com/demo/MouseHover.php");

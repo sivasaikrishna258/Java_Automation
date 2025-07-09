@@ -2,6 +2,7 @@ package seleniumOperations;
 
 import java.time.Duration;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +21,6 @@ public class AutoCompleteGooglePlaces {
 		System.setProperty("webdriver.chrome.driver","./Driver/chromedriver.exe");
 		
 		WebDriver driver=new ChromeDriver();
-	
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.get("https://www.makemytrip.com/");
 		driver.manage().window().maximize();
